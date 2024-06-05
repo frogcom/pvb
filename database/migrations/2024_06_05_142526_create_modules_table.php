@@ -1,9 +1,10 @@
 <?php
 
-use App\Models\category;
+use App\Models\Category;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+
 
 return new class extends Migration
 {
@@ -14,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('modules', function (Blueprint $table) {
             $table->id();
-            $table->foreignIdFor(category::class)->nullable();
+            $table->foreignIdFor(Category::class)->nullable();
             $table->string('title');
             $table->longText('text');
             $table->integer('available_spots');
