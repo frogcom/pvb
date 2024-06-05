@@ -16,11 +16,11 @@
                         {{ __('Dashboard') }}
                     </x-nav-link>
                 </div>
-{{--                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">--}}
-{{--                    <x-nav-link :href="route('shifts.index')" :active="request()->routeIs('shifts.index')">--}}
-{{--                        {{ __('Shifts') }}--}}
-{{--                    </x-nav-link>--}}
-{{--                </div>--}}
+                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <x-nav-link :href="route('modules.index')" :active="request()->routeIs('modules.index')">
+                        {{ __('keuze modules') }}
+                    </x-nav-link>
+                </div>
 {{--                <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">--}}
 {{--                    <x-nav-link :href="route('invoices.index')" :active="request()->routeIs('invoices.index')">--}}
 {{--                        {{ __('Invoices') }}--}}
