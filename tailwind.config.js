@@ -1,5 +1,5 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
-import forms from '@tailwindcss/forms';
+
 import daisyui from "daisyui";
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -11,8 +11,13 @@ export default {
 
     theme: {
         extend: {
+            colors: {
+                red: '#EF3624',
+                blue: '#017BAC',
+                yellow: '#FFD500',
+            },
             fontFamily: {
-                sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                sans: ['Montserrat', ...defaultTheme.fontFamily.sans],
             },
         },
     },

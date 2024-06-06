@@ -1,3 +1,39 @@
 <x-guest-layout>
-        test
+    <div class="bg-white">
+        <div class="grid grid-cols-1 lg:grid-cols-2 max-w-screen-2xl mx-auto ">
+            <div class="">
+                <div class="shadowImage " style="background-image: url('{{asset('assets/header1.png')}}');">
+                </div>
+            </div>
+            <div class="flex justify-end flex-col mt-48 ">
+                <h1 class="text-7xl mb-12 text-wrap p-4 ">Wat ga jij kiezen?</h1>
+                <p class="text-base mb-12  p-4">
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque enim illo illum libero
+                    molestias quae qui reiciendis ullam voluptate! Ad dolores eius inventore perferendis qui recusandae
+                    repellendus rerum, sapiente? Adipisci cumque dolor dolorem eius, nostrum nulla omnis perspiciatis rerum
+                    tempora? Ab alias aliquid amet autem commodi, corporis cumque doloribus eum in iusto, natus
+                    necessitatibus nesciunt nulla obcaecati odio placeat quia reiciendis repudiandae saepe soluta ut
+                    voluptate voluptatem. A ad debitis dolor dolorum error et exercitationem explicabo fugit, incidunt,
+                    labore magnam modi molestias neque nisi obcaecati pariatur perspiciatis qui quibusdam ratione saepe
+                    similique tempore voluptate voluptatibus. Odit placeat ratione voluptatem?
+                </p>
+                <button class="btn btn-error bg-red text-white w-max my-4 ml-4">NAAR KEUZENMODULES</button>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="  bg-base-300 ">
+        <div class=" max-w-screen-2xl mx-auto">
+            <h2 class="text-4xl lg:text-6xl py-16 break-words pl-4"> laaste keuzenmodules</h2>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
+                <x-module.card></x-module.card>
+                <x-module.card></x-module.card>
+                <x-module.card></x-module.card>
+            </div>
+
+            <button class="btn btn-outline my-20"> alle keuzenmodules </button>
+        </div>
+    </div>
 </x-guest-layout>

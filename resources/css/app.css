@@ -1,7 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import '@fortawesome/fontawesome-free/css/fontawesome.css';
+@import '@fortawesome/fontawesome-free/css/regular.css';
+@import '@fortawesome/fontawesome-free/css/solid.css';
+@import '@fortawesome/fontawesome-free/css/brands.css';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 .select {
     @apply text-base
+}
+
+.shadowImage {
+    -webkit-box-shadow: 80px 100px  #017BAC;
+    -moz-box-shadow: 80px 100px  #017BAC;
+    box-shadow: 125px 100px #017BAC;
+    @apply bg-cover bg-center rounded-full
+    w-72 h-72
+    lg:w-[37rem] lg:h-[37rem]
+    md:w-96 md:h-96
+    mt-4 pb-8
+    mx-auto
+
 }
