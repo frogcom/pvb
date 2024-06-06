@@ -3,7 +3,7 @@
 <div class=" max-w-screen-xl mx-auto">
 
     <div class="text-center">
-        <h2 class="text-7xl my-8">keuzemodules</h2>
+        <h2 class="text-5xl my-8 lg:text-7xl">keuzemodules</h2>
         <p class="mb-16">Hier een overzicht van alle keuzemodules die deze periode worden aangeboden</p>
     </div>
 

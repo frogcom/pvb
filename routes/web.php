@@ -10,6 +10,7 @@ Route::get('/', [LandingPageController::class, 'index'])->name('landingpage');
 Route::get('/keuzemodules', [ModuleController::class, 'index'])->name('keuzemodules.index') ;
 Route::get('/keuzemodules/{module}', [ModuleController::class, 'show'])->name('keuzemodules.show') ;
 Route::get('/aanmelden', [RegistrationsController::class, 'index'])->name('aanmelden');
+Route::post('/aanmelden/store', [RegistrationsController::class, 'store'])->name('registration.store');
 
 Route::get('/dashboard', function () {
     return view('dashboard');
