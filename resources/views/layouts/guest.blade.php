@@ -79,11 +79,10 @@
                         </div>
                         <div class="w-12 h-12 bg-red rounded-full flex mx-2">
 
-                            <i class="fa-brands fa-facebook-f rounded-full self-center mx-auto "></i>
+                            <i class="fa-brands fa-twitter rounded-full self-center mx-auto "></i>
                         </div>
                         <div class="w-12 h-12 bg-red rounded-full flex mx-2">
-
-                            <i class="fa-brands fa-facebook-f rounded-full self-center mx-auto "></i>
+                            <i class="fa-brands fa-instagram rounded-full self-center mx-auto"></i>
                         </div>
                     </div>
 
