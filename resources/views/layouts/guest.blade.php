@@ -19,13 +19,15 @@
 
 <div class="drawer">
     <input id="my-drawer-3" type="checkbox" class="drawer-toggle"/>
-    <div class="drawer-content flex flex-col">
+    <div class="drawer-content flex flex-col min-h-screen">
         <!-- Navbar -->
         <div class=" w-full bg-white ">
             <div class="p-0 flex w-full  max-w-screen-2xl mx-auto">
 
                 <div class="flex-1 px-2">
+                    <a href="{{route('landingpage')}}">
                     <img class="w-32 h-full" src="{{asset('assets/logo.svg')}}" alt="">
+                    </a>
                 </div>
                 <div class="flex-none hidden lg:block my-auto">
                     <ul class="menu menu-horizontal">
@@ -50,7 +52,7 @@
 
         </div>
 
-        <div class="min-h-screen">
+        <div class="h-full">
             {{ $slot }}
         </div>
 

@@ -11,7 +11,7 @@ class RegistrationsController extends Controller
     //
     public function index()
     {
-        return view('registrations.index');
+        return view('frontend.registration');
     }
 
     public function store(Request $request){

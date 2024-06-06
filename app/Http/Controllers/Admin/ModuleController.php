@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
-use App\Models\category;
+use App\Models\Category;
 use App\Models\Module;
 use Illuminate\Http\Request;
 
@@ -27,7 +27,7 @@ class ModuleController extends Controller
     {
         //
         $view = view('modules.create');
-        $view->categories = category::all();
+        $view->categories = Category::all();
 
 
         return $view;
@@ -70,7 +70,7 @@ class ModuleController extends Controller
         $view = view('modules.edit');
 
         $view->module = $module;
-        $view->categories = category::all();
+        $view->categories = Category::all();
 
 
         return $view;
