@@ -1,12 +1,12 @@
 <x-guest-layout>
     <div class="bg-white">
-        <div class="grid grid-cols-1 lg:grid-cols-2 max-w-screen-2xl mx-auto ">
-            <div class="">
+        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-screen-2xl mx-auto ">
+            <div class="sm:order-1 ">
                 <div class="shadowImage " style="background-image: url('{{asset('assets/header1.png')}}');">
                 </div>
             </div>
             <div class="flex justify-end flex-col mt-48 ">
-                <h1 class="text-7xl mb-12 text-wrap p-4 ">Wat ga jij kiezen?</h1>
+                <h1 class="text-6xl lg:text-7xl mb-12 text-wrap p-4 ">Wat ga jij kiezen?</h1>
                 <p class="text-base mb-12  p-4">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam cumque enim illo illum libero
                     molestias quae qui reiciendis ullam voluptate! Ad dolores eius inventore perferendis qui recusandae
@@ -28,9 +28,11 @@
             <h2 class="text-4xl lg:text-6xl py-16 break-words pl-4"> laaste keuzenmodules</h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
-                <x-module.card></x-module.card>
-                <x-module.card></x-module.card>
-                <x-module.card></x-module.card>
+
+                @foreach($modules as $module)
+                    <x-module.card :module="$module"/>
+
+                @endforeach
             </div>
 
             <button class="btn btn-outline my-20"> alle keuzenmodules </button>
