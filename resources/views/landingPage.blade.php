@@ -1,6 +1,6 @@
 <x-guest-layout>
     <div class="bg-white">
-        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-screen-2xl mx-auto ">
+        <div class="grid grid-cols-1 sm:grid-cols-2 max-w-screen-xl mx-auto ">
             <div class="sm:order-1 ">
                 <div class="shadowImage " style="background-image: url('{{asset('assets/header1.png')}}');">
                 </div>
@@ -17,15 +17,15 @@
                     labore magnam modi molestias neque nisi obcaecati pariatur perspiciatis qui quibusdam ratione saepe
                     similique tempore voluptate voluptatibus. Odit placeat ratione voluptatem?
                 </p>
-                <button class="btn btn-error bg-red text-white w-max my-4 ml-4">NAAR KEUZENMODULES</button>
+                <button class="btn btn-error bg-red text-white w-max my-4 ml-4">NAAR keuzen</button>
             </div>
 
         </div>
     </div>
 
     <div class="  bg-base-300 ">
-        <div class=" max-w-screen-2xl mx-auto">
-            <h2 class="text-4xl lg:text-6xl py-16 break-words pl-4"> laaste keuzenmodules</h2>
+        <div class=" max-w-screen-xl mx-auto">
+            <h2 class="text-4xl lg:text-6xl py-16 break-words pl-4"> laaste keuzemodules</h2>
 
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4">
 
@@ -35,7 +35,9 @@
                 @endforeach
             </div>
 
-            <button class="btn btn-outline my-20"> alle keuzenmodules </button>
+            <a href="{{route('keuzemodules.index')}}">
+            <button class="btn btn-outline my-20 ml-4"> alle keuzemodules </button>
+            </a>
         </div>
     </div>
 </x-guest-layout>

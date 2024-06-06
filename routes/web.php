@@ -7,8 +7,8 @@ use App\Http\Controllers\RegistrationsController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [LandingPageController::class, 'index'])->name('landingpage');
-Route::get('/keuzenmodules', [ModuleController::class, 'index'])->name('keuzenmodules.index') ;
-Route::get('/keuzenmodules/{module}', [ModuleController::class, 'show'])->name('keuzenmodules.show') ;
+Route::get('/keuzemodules', [ModuleController::class, 'index'])->name('keuzemodules.index') ;
+Route::get('/keuzemodules/{module}', [ModuleController::class, 'show'])->name('keuzemodules.show') ;
 Route::get('/aanmelden', [RegistrationsController::class, 'index'])->name('aanmelden');
 
 Route::get('/dashboard', function () {

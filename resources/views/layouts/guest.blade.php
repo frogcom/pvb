@@ -22,7 +22,7 @@
     <div class="drawer-content flex flex-col min-h-screen">
         <!-- Navbar -->
         <div class=" w-full bg-white ">
-            <div class="p-0 flex w-full  max-w-screen-2xl mx-auto">
+            <div class="p-0 flex w-full  max-w-screen-xl mx-auto">
 
                 <div class="flex-1 px-2">
                     <a href="{{route('landingpage')}}">
@@ -33,7 +33,7 @@
                     <ul class="menu menu-horizontal">
                         <!-- Navbar menu content here -->
                         <li><a href="{{route('landingpage')}}">Home</a></li>
-                        <li><a href="{{route('keuzenmodules.index')}}">KeuzenModules</a></li>
+                        <li><a href="{{route('keuzemodules.index')}}">keuzemodules</a></li>
                     </ul>
                 </div>
                 <div class="flex-none lg:hidden p-4">
@@ -57,7 +57,7 @@
         </div>
 
         <div class="bg-[#072329] pt-28">
-            <div class="max-w-screen-2xl mx-auto">
+            <div class="max-w-screen-xl mx-auto">
 
                 <div class="flex flex-col lg:flex-row justify-between text-white  justify-items-center">
                     <div class="flex flex-col lg:flex-row text-center">
@@ -67,7 +67,7 @@
                         <div>
                             <h3 class="text-red mb-2 leading-10"> RIETVELDUREN </h3>
                             <div>home</div>
-                            <div>keuzenmodules</div>
+                            <div>keuzemodules</div>
                             <div>contact</div>
                         </div>
                     </div>
@@ -105,7 +105,7 @@
         <ul class="menu p-4 w-80 min-h-full bg-base-200">
             <!-- Sidebar content here -->
             <li><a href="{{route('landingpage')}}">Home</a></li>
-            <li><a href="{{route('keuzenmodules.index')}}">KeuzenModules</a></li>
+            <li><a href="{{route('keuzemodules.index')}}">keuzemodules</a></li>
         </ul>
     </div>
 </div>

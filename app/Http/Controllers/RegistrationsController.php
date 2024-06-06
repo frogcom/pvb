@@ -27,9 +27,9 @@ class RegistrationsController extends Controller
             ]);
             $reqistration->assosiate($request->get('module_id'));
             $reqistration->save();
-            return redirect()->route('keuzenmodules.index')->with('success', 'aanmelding is gelukt');
+            return redirect()->route('keuzemodules.index')->with('success', 'aanmelding is gelukt');
         }
-        return redirect()->route('keuzenmodules.index')->with('error', 'er zijn geen plekken meer over in dit keuzendeel');
+        return redirect()->route('keuzemodules.index')->with('error', 'er zijn geen plekken meer over in dit keuzendeel');
 
     }
 }

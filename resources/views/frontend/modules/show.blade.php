@@ -1,8 +1,8 @@
 <x-guest-layout>
-    <div class="max-w-screen-2xl mx-auto mb-12">
+    <div class="max-w-screen-xl mx-auto mb-12">
 
         <div class="mt-8">
-            <a href="{{ route('keuzenmodules.index') }}">
+            <a href="{{ route('keuzemodules.index') }}">
 
             <i class="fa-solid fa-arrow-left"></i><span>Terug naar overzicht</span>
             </a>
