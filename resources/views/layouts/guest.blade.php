@@ -34,6 +34,8 @@
                         <!-- Navbar menu content here -->
                         <li><a href="{{route('landingpage')}}">Home</a></li>
                         <li><a href="{{route('keuzemodules.index')}}">keuzemodules</a></li>
+                        <li><a href="{{route('aanmelden')}}">aammelden</a></li>
+                        
                     </ul>
                 </div>
                 <div class="flex-none lg:hidden p-4">
@@ -105,6 +107,7 @@
             <!-- Sidebar content here -->
             <li><a href="{{route('landingpage')}}">Home</a></li>
             <li><a href="{{route('keuzemodules.index')}}">keuzemodules</a></li>
+            <li><a href="{{route('aanmelden')}}">aammelden</a></li>
         </ul>
     </div>
 </div>
