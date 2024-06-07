@@ -1,4 +1,7 @@
 <x-guest-layout>
+    <div class="max-w-xs mx-auto">
+
+        <h2 class="text-3xl text-center">LOGIN</h2>
     <!-- Session Status -->
     <x-auth-session-status class="mb-4" :status="session('status')" />
     {{ html()->form()->route('login')->open() }}
@@ -36,4 +39,6 @@
             </x-primary-button>
         </div>
 {{ html()->form()->close() }}
+    </div>
+
 </x-guest-layout>

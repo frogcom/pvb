@@ -6,7 +6,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
     <title>{{ config('app.name', 'Laravel') }}</title>
-
+    <link rel="shortcut icon" href="{{ asset('assets/logo.svg') }}">
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet"/>
@@ -35,7 +35,7 @@
                         <li><a href="{{route('landingpage')}}">Home</a></li>
                         <li><a href="{{route('keuzemodules.index')}}">keuzemodules</a></li>
                         <li><a href="{{route('aanmelden')}}">aammelden</a></li>
-                        
+
                     </ul>
                 </div>
                 <div class="flex-none lg:hidden p-4">
