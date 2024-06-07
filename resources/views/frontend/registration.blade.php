@@ -19,19 +19,19 @@
                     <x-input-label for="name" :value="__('Naam')" />
                     {{html()->input('student_name')->name('student_name')->class('input input-bordered w-full mb-4 mt-1 text-base-content')}}
 
-                    <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                    <x-input-error :messages="$errors->get('student_name')" class="mt-2" />
                 </div>
             <div>
                 <x-input-label for="name" :value="__('Email')" />
                 {{html()->input('student_email')->name('student_email')->class('input input-bordered w-full mb-4 mt-1 text-base-content ')}}
 
-                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                <x-input-error :messages="$errors->get('student_email')" class="mt-2" />
             </div>
             <div>
                 <x-input-label for="name" :value="__('Phone')" />
                 {{html()->number('student_phone')->name('student_phone')->class('input input-bordered w-full mb-4 mt-1 text-base-content')}}
 
-                <x-input-error :messages="$errors->get('name')" class="mt-2" />
+                <x-input-error :messages="$errors->get('student_phone')" class="mt-2" />
             </div>
             <div>
                 <x-input-label for="name" :value="__('keuze module')" />
