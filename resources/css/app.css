@@ -11,6 +11,7 @@
 }
 
 .shadowImage {
+    position: absolute;
     -webkit-box-shadow: 80px 100px  #017BAC;
     -moz-box-shadow: 80px 100px  #017BAC;
     box-shadow: 7.5vw  5vw #017BAC;

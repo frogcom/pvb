@@ -11,7 +11,7 @@
 <div class="bg-[#F4F2EF]">
     <div class=" max-w-screen-xl mx-auto ">
 
-        <div class="grid grid-cols-1 lg:grid-cols-3 gap-4 p-4 ">
+        <div class="grid grid-cols-1  lg:grid-cols-3 gap-4 p-4 ">
             @foreach($modules as $module)
                 <x-module.card :module="$module"/>
             @endforeach

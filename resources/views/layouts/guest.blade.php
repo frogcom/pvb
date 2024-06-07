@@ -64,13 +64,13 @@
                 <div class="flex flex-col lg:flex-row justify-between text-white  justify-items-center">
                     <div class="flex flex-col lg:flex-row text-center">
                         <div class="text-2xl pr-6">
-                            Gerrit rietveld uren
+                            Gerrit rietveld College
                         </div>
                         <div>
                             <h3 class="text-red mb-2 leading-10"> RIETVELDUREN </h3>
-                            <div>home</div>
-                            <div>keuzemodules</div>
-                            <div>contact</div>
+                            <div>Home</div>
+                            <div>Keuzemodules</div>
+                            <div>Contact</div>
                         </div>
                     </div>
 

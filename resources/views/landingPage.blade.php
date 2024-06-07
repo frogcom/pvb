@@ -5,7 +5,6 @@
 
                 <div class=" mx-auto order-1 mt-4">
                     <div class="shadowImage " style="background-image: url('{{asset('assets/header1.png')}}');"></div>
-                    <div class="shadowbackground"></div>
                 </div>
                 <div class="flex justify-end flex-col mt-48 max-w-lg">
                     <h1 class="text-6xl lg:text-7xl mb-12 text-wrap p-4 ">Wat ga jij kiezen?</h1>
@@ -15,7 +14,7 @@
                         repellendus rerum, sapiente? Adipisci cumque dolor dolorem eius, nostrum nulla omnis perspiciatis rerum
                         tempora? Ab alias aliquid amet autem commodi, corporis cumque doloribus eum in iusto, natus
                     </p>
-                    <button class="btn btn-error bg-red text-white w-max my-4 ml-4">NAAR keuzen</button>
+                    <button class="btn btn-error bg-red text-white w-max my-4 ml-4">Naar Keuzemodules</button>
                 </div>
             </div>
 

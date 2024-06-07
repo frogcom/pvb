@@ -3,10 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\RegistrationRequest;
+use App\Mail\convermationMail;
 use App\Models\Module;
 use App\Models\Registration;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class RegistrationsController extends Controller
 {
@@ -23,7 +25,6 @@ class RegistrationsController extends Controller
 
         $module = Module::find($request->get('module_id'));
 
-        $count = $module->registrations->count();
         if($module->available_spots >= 1){
             $registration = Registration::create([
                 'student_name' => $request->get('student_name'),
@@ -35,6 +36,10 @@ class RegistrationsController extends Controller
 
             --$module->available_spots;
             $module->save();
+            // todo finish mail
+            Mail::to($request->user())->send(
+                new convermationMail($request->all())
+            );
             return redirect()->route('aanmelden')->with('success', 'aanmelding is gelukt');
         }
         return redirect()->route('aanmelden')->withInput()->with('error', 'er zijn geen plekken meer over in dit keuzendeel');
