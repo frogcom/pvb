@@ -13,6 +13,7 @@
             <thead>
             <tr>
                 <th>naam</th>
+                <th>email</th>
                 <th>keuzemodule</th>
                 <th>categorie</th>
             </tr>
@@ -22,6 +23,7 @@
             <tr>
 
                 <th>{{$registration->student_name}}</th>
+                <th>{{$registration->student_email}}</th>
                 <td>{{$registration->module->title}}</td>
                 <td>{{$registration->module->category->name}}</td>
             </tr>
