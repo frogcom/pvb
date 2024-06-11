@@ -37,9 +37,9 @@ class RegistrationsController extends Controller
             --$module->available_spots;
             $module->save();
             // todo finish mail
-            Mail::to($request->user())->send(
-                new convermationMail($request->all())
-            );
+//            Mail::to($request->user())->send(
+//                new convermationMail($request->all())
+//            );
             return redirect()->route('aanmelden')->with('success', 'aanmelding is gelukt');
         }
         return redirect()->route('aanmelden')->withInput()->with('error', 'er zijn geen plekken meer over in dit keuzendeel');
