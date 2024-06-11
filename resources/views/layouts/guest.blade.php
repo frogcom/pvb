@@ -62,7 +62,7 @@
             <div class="max-w-screen-xl mx-auto">
 
                 <div class="flex flex-col lg:flex-row justify-between text-white  justify-items-center">
-                    <div class="flex flex-col lg:flex-row text-center">
+                    <div class="flex flex-col lg:flex-row lg:text-left text-center">
                         <div class="text-2xl pr-6">
                             Gerrit rietveld College
                         </div>
@@ -91,7 +91,7 @@
                 </div>
                 <hr class="h-px my-8 border-0 bg-[#3A3C56] mt-16 mb-8">
 
-                <div class="flex text-gray-400 flex-col md:flex-row mb-8">
+                <div class="flex text-gray-400 flex-col md:flex-row mb-8 text-center lg:text-left">
                     <div> Copyright © {{ \Carbon\Carbon::now()->format('Y') }} &nbsp; </div>
                     <div> Gerrit Rietveld College</div>
 

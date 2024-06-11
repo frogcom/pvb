@@ -4,7 +4,7 @@
             <div class="flex flex-wrap-reverse">
 
                 <div class=" mx-auto order-1 mt-4">
-                    <div class="shadowImage " style="background-image: url('{{asset('assets/header1.png')}}');"></div>
+                    <div class="shadowImage" style="background-image: url('{{asset('assets/header1.png')}}');"></div>
                 </div>
                 <div class="flex justify-end flex-col mt-48 max-w-lg">
                     <h1 class="text-6xl lg:text-7xl mb-12 text-wrap p-4 ">Wat ga jij kiezen?</h1>

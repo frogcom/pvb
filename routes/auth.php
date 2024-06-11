@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\ModuleController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\ConfirmablePasswordController;
@@ -37,6 +38,7 @@ Route::middleware('guest')->group(function () {
 });
 
 Route::middleware('auth')->group(function () {
+    Route::get('dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::resource('modules', ModuleController::class);
     Route::resource('module', ModuleController::class);
     Route::get('verify-email', EmailVerificationPromptController::class)

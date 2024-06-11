@@ -37,8 +37,8 @@
 
                     <div>
 
-{{--                        {{ html()->file()->name('file')->class('file-input file-input-bordered w-full max-w-xs mt-4') }}--}}
-                        <input type="file" name="image">
+                        {{ html()->file()->name('file')->class('file-input file-input-bordered w-full max-w-xs mt-4') }}
+{{--                        <input type="file" name="image">--}}
                     </div>
 
 
