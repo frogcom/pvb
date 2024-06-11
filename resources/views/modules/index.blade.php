@@ -11,7 +11,7 @@
             <div class="bg-base-100 overflow-hidden shadow-sm sm:rounded-lg">
 
                 <div class="ml-8 mt-8">
-                    <a href="{{route('modules.create')}}">
+                    <a href="{{route('module.create')}}">
                         <button class="btn btn-accent"> nieuwe keuze module</button>
                     </a>
                 </div>

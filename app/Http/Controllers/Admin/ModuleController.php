@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\Module;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class ModuleController extends Controller
 {
@@ -44,11 +45,30 @@ class ModuleController extends Controller
             'available_spots' => $request->get('available_spots'),
             'total_spots' => $request->get('available_spots'),
         ]);
+        if (($request->hasFile('image'))) {
+            $file = $request->file('image');
+
+            // Generate a unique file name
+            $filename = time() . '_' . $file->getClientOriginalName();
+
+            // Define the upload path
+            $path = $file->storeAs('modules', $filename, 'public');
+
+//            dump('test');
+//            $path = Storage::putFile('modules', $request->file('file'), 'public');
+//            dump('test');
+//
+            $module->image()->create([
+                'url' => $path,
+            ]);
+//            dump('test');
+//
+        }
 
         $module->category()->associate($request->get('category_id'));
         $module->save();
         //
-        return redirect()->route('modules.index');
+        return redirect()->route('module.index');
     }
 
     /**
