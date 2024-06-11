@@ -14,7 +14,9 @@
                         repellendus rerum, sapiente? Adipisci cumque dolor dolorem eius, nostrum nulla omnis perspiciatis rerum
                         tempora? Ab alias aliquid amet autem commodi, corporis cumque doloribus eum in iusto, natus
                     </p>
+                    <a href="{{route('keuzemodules.index')}}">
                     <button class="btn btn-error bg-red text-white w-max my-4 ml-4">Naar Keuzemodules</button>
+                    </a>
                 </div>
             </div>
 

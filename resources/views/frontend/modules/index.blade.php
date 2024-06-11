@@ -13,7 +13,7 @@
 
         <div class="grid grid-cols-1  lg:grid-cols-3 gap-4 p-4 ">
             @foreach($modules as $module)
-                <x-module.card :module="$module"/>
+                <x-module.card  :module="$module"/>
             @endforeach
         </div>
 
