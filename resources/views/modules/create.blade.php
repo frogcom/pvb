@@ -13,7 +13,7 @@
                 <h2 class="text-2xl font-semibold text-center mt-8">nieuwe shift</h2>
 
                 <div class="p-6 text-base-content content-center justify-center flex">
-                    {{ html()->form()->route('module.store')->acceptsFiles()->open() }}
+                    {{ html()->form()->route('modules.store')->acceptsFiles()->open() }}
 
                     {{ html()->label('title ')}}
                     {{ html()->input()->name('title')->placeholder('titel')->class('input input-bordered w-full max-w-2xl mt-4 ')    }}

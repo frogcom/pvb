@@ -59,7 +59,7 @@ class ModuleController extends Controller
         $module->category()->associate($request->get('category_id'));
         $module->save();
         //
-        return redirect()->route('module.index');
+        return redirect()->route('modules.index');
     }
 
     /**
