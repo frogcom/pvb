@@ -19,12 +19,9 @@
                     {{ html()->input()->name('title')->placeholder('titel')->class('input input-bordered w-full max-w-2xl mt-4 ')    }}
                     <x-input-error :messages="$errors->get('title')" class="mt-2 mb-4"/>
                     {{ html()->label('totaal plekken ')}}
-                    {{ html()->number()->name('available_spots')->placeholder('aantal plekken')->class('input input-bordered w-full max-w-2xl mt-4 mb-4')    }}
-                    <x-input-error :messages="$errors->get('total_places')" class="mt-2 mb-4"/>
+                    {{ html()->number()->name('total_spots')->placeholder('aantal plekken')->class('input input-bordered w-full max-w-2xl mt-4 mb-4')    }}
+                    <x-input-error :messages="$errors->get('total_spots')" class="mt-2 mb-4"/>
 
-                    {{ html()->label('beschikbare plekken  ')}}
-                    {{ html()->number()->name('available_spots')->placeholder('beschikbare plekken')->class('input input-bordered w-full max-w-2xl mt-4 mb-4')    }}
-                    <x-input-error :messages="$errors->get('available_places')" class="mt-2 mb-4"/>
 
 
                     {{ html()->label('pagina text ')}}

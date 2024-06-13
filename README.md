@@ -44,3 +44,12 @@ Run the next commands in your terminal for installation
     Run npm install
 
     Run npm run dev
+
+
+## Auth
+
+De inlog gegevens voor de user is:
+
+
+    Email: test@example.com 
+    Password: password

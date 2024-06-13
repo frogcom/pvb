@@ -10,19 +10,18 @@
     @apply text-base
 }
 
-/*.shadowImage {*/
-/*    -webkit-box-shadow: 80px 100px  #017BAC;*/
-/*    -moz-box-shadow: 80px 100px  #017BAC;*/
-/*    box-shadow: 7.5vw  5vw #017BAC;*/
-
-/*}*/
-/*@media (max-width: 640px) {*/
-/*    .shadowImage {*/
-/*        -webkit-box-shadow: 1vw 100px  #017BAC;*/
-/*        -moz-box-shadow: 80px 100px   #017BAC;*/
-/*        box-shadow: 15vw 10vw  #017BAC;*/
-
-/*    }*/
-/*}*/
 
 /* todo ck editor styling*/
+
+.ck-content h2 {
+    @apply text-4xl
+}
+.ck-content h3 {
+    @apply text-3xl
+}
+.ck-content h4 {
+    @apply text-xl
+}
+.ck-content p {
+    @apply text-base
+}

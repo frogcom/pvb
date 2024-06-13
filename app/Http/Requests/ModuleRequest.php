@@ -24,11 +24,9 @@ class ModuleRequest extends FormRequest
         return [
             //
             'title' => ['required', 'string', 'max:255'],
-            'total_places' => ['required', 'integer'],
-            'available_places' => ['required', 'integer', 'lte:total_places'],
+            'total_spots' => ['required', 'integer'],
             'text' => ['required'],
-            'categorie_id' => ['required', 'integer', 'exists:categories,id'],
-            'file' => 'required|file|mimes:jpg,jpeg,png|max:2048'
+            'category_id' => ['required', 'integer', 'exists:categories,id'],
         ];
     }
 }

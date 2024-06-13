@@ -43,9 +43,10 @@ class ModuleController extends Controller
         $module = Module::create([
             'title' => $request->get('title'),
             'text' => $request->get('text'),
-            'available_spots' => $request->get('available_spots'),
-            'total_spots' => $request->get('available_spots'),
+            'available_spots' => $request->get('total_spots'),
+            'total_spots' => $request->get('total_spots'),
         ]);
+
         if (($request->hasFile('file'))) {
             $file = $request->file('file');
 
@@ -91,15 +92,20 @@ class ModuleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Module $module)
+    public function update(ModuleRequest $request, Module $module)
     {
-        // todo hou rekening met bestaande aanmeldingen
-        //
+        if($module->has('registrations')){
+            $available_spots = $request->get('total_spots') - $module->registrations->count();
+
+        } else {
+            $available_spots = $request->get('available_spots');
+        }
+
         $module->update([
             'title' => $request->get('title'),
             'text' => $request->get('text'),
-            'available_spots' => $request->get('available_spots'),
-            'total_spots' => $request->get('available_spots'),
+            'available_spots' => $available_spots,
+            'total_spots' => $request->get('total_spots'),
         ]);
 
         if($request->hasFile('file')){

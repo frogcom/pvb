@@ -19,11 +19,12 @@
                     {{ html()->input()->name('title')->placeholder('titel')->class('input input-bordered w-full max-w-2xl ')->value($module->title) }}
                     <x-input-error :messages="$errors->get('titel')" class="mt-2 mb-4"/>
 
-                    {{ html()->label('totaal plekken ')}}
-                    {{ html()->number()->name('available_spots')->placeholder('aantal plekken')->class('input input-bordered w-full max-w-2xl ')->value($module->available_spots)    }}
-                    <x-input-error :messages="$errors->get('total_places')" class="mt-2 mb-4"/>
 
-                    {{ html()->textarea()->name('text')->id('textarea')->value($module->text) }}
+                    {{ html()->label('totaal plekken ')}}
+                    {{ html()->number()->name('total_spots')->placeholder('aantal plekken')->class('input input-bordered w-full max-w-2xl mb-4')->value($module->total_spots)    }}
+                    <x-input-error :messages="$errors->get('total_spots')" class="mt-2"/>
+
+                    {{ html()->textarea()->name('text')->id('textarea')->value($module->text)}}
                     <x-input-error :messages="$errors->get('text')" class="mt-2 mb-4"/>
 
                     <div>
