@@ -37,7 +37,6 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function(){
-            //....
             let body = document.getElementById('body')
             body.setAttribute('data-theme', localStorage.getItem('data-theme'))
         });
