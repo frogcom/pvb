@@ -61,7 +61,7 @@
                                                 <h3 class="font-bold text-lg">Hello!</h3>
                                                 <p class="py-4">weet je zeker dat je deze shift wilt verwijderen</p>
 
-                                                {{html()->form('delete')->route('modules.destroy', $module->id)->open()}}
+                                                {{html()->form('delete')->route('module.destroy', $module->id)->open()}}
 
                                                 {{ html()->submit('verwijderen')->class('btn btn-error') }}
                                                 {{ html()->form()->close() }}

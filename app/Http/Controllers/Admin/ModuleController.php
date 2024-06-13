@@ -45,24 +45,15 @@ class ModuleController extends Controller
             'available_spots' => $request->get('available_spots'),
             'total_spots' => $request->get('available_spots'),
         ]);
-        if (($request->hasFile('image'))) {
-            $file = $request->file('image');
+        if (($request->hasFile('file'))) {
+            $file = $request->file('file');
 
-            // Generate a unique file name
-            $filename = time() . '_' . $file->getClientOriginalName();
-
-            // Define the upload path
+            $filename = time() . '_' . $file->hashName();
             $path = $file->storeAs('modules', $filename, 'public');
 
-//            dump('test');
-//            $path = Storage::putFile('modules', $request->file('file'), 'public');
-//            dump('test');
-//
             $module->image()->create([
                 'url' => $path,
             ]);
-//            dump('test');
-//
         }
 
         $module->category()->associate($request->get('category_id'));
@@ -121,6 +112,8 @@ class ModuleController extends Controller
      */
     public function destroy(Module $module)
     {
+        Storage::disk('public')->delete('modules'.$module->image->url);
+        $module->image()->delete();
         $module->delete();
         return redirect()->route('modules.index');
         //
