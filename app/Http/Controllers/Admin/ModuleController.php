@@ -101,6 +101,7 @@ class ModuleController extends Controller
      */
     public function update(Request $request, Module $module)
     {
+        // todo hou rekening met bestaande aanmeldingen
         //
         $module->update([
             'title' => $request->get('title'),
