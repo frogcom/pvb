@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\ModuleRequest;
 use App\Models\Category;
 use App\Models\Module;
 use Illuminate\Http\Request;
@@ -37,7 +38,7 @@ class ModuleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(Request $request)
+    public function store(ModuleRequest $request)
     {
         $module = Module::create([
             'title' => $request->get('title'),
@@ -100,13 +101,12 @@ class ModuleController extends Controller
             'available_spots' => $request->get('available_spots'),
             'total_spots' => $request->get('available_spots'),
         ]);
+
         if($request->hasFile('file')){
             $file = $request->file('file');
-
             $filename = time() . '_' . $file->hashName();
             $path = $file->storeAs('modules', $filename, 'public');
-
-            $module->image()->update([
+            $module->image->update([
                 'url' => $path,
             ]);
         }

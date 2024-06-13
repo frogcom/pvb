@@ -17,12 +17,19 @@
 
                     {{ html()->label('title ')}}
                     {{ html()->input()->name('title')->placeholder('titel')->class('input input-bordered w-full max-w-2xl mt-4 ')    }}
-                    <x-input-error :messages="$errors->get('titel')" class="mt-2 mb-4"/>
+                    <x-input-error :messages="$errors->get('title')" class="mt-2 mb-4"/>
                     {{ html()->label('totaal plekken ')}}
                     {{ html()->number()->name('available_spots')->placeholder('aantal plekken')->class('input input-bordered w-full max-w-2xl mt-4 mb-4')    }}
                     <x-input-error :messages="$errors->get('total_places')" class="mt-2 mb-4"/>
+
+                    {{ html()->label('beschikbare plekken  ')}}
+                    {{ html()->number()->name('available_spots')->placeholder('beschikbare plekken')->class('input input-bordered w-full max-w-2xl mt-4 mb-4')    }}
+                    <x-input-error :messages="$errors->get('available_places')" class="mt-2 mb-4"/>
+
+
                     {{ html()->label('pagina text ')}}
                     {{ html()->textarea()->name('text')->id('textarea')}}
+                    <x-input-error :messages="$errors->get('text')" class="mt-2 mb-4"/>
                     <div>
                         {{  html()->label('categorie')}}
                         {{ html()->select('category_id', $categories->pluck('name', 'id'))->class('select select-bordered w-full max-w-2xl  mt-4') }}
@@ -31,8 +38,9 @@
 
 
                     <div>
-
-                        {{ html()->file()->name('file')->class('file-input file-input-bordered w-full max-w-xs mt-4') }}
+                        {{html()->label('keuze module afbeelding')->class('mt-4')}}
+                        {{ html()->file()->name('file')->class('file-input file-input-bordered w-full  mt-4') }}
+                        <x-input-error :messages="$errors->get('file')" class="mt-2 mb-4"/>
                     </div>
 
 
