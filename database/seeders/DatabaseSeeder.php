@@ -27,5 +27,14 @@ class DatabaseSeeder extends Seeder
         Category::create([
             'name' => 'Muziek'
         ]);
+        Category::create([
+            'name' => 'Media maken'
+        ]);
+        Category::create([
+            'name' => 'Divers'
+        ]);
+        Category::create([
+            'name' => 'Fashion'
+        ]);
     }
 }
