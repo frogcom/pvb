@@ -10,7 +10,7 @@ class LandingPageController extends Controller
     //
     public function index()
     {
-        $view = view('landingPage');
+        $view = view('frontend.landingPage');
         $view->modules = Module::all();
         return $view;
     }
