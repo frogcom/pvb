@@ -100,6 +100,16 @@ class ModuleController extends Controller
             'available_spots' => $request->get('available_spots'),
             'total_spots' => $request->get('available_spots'),
         ]);
+        if($request->hasFile('file')){
+            $file = $request->file('file');
+
+            $filename = time() . '_' . $file->hashName();
+            $path = $file->storeAs('modules', $filename, 'public');
+
+            $module->image()->update([
+                'url' => $path,
+            ]);
+        }
 
         $module->category()->associate($request->get('category_id'));
         $module->save();

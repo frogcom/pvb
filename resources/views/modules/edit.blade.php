@@ -17,29 +17,24 @@
 
                     {{ html()->label('title ')}}
                     {{ html()->input()->name('title')->placeholder('titel')->class('input input-bordered w-full max-w-2xl ')->value($module->title) }}
-                    <x-input-error :messages="$errors->get('titel')" class="mt-2 mb-4" />
+                    <x-input-error :messages="$errors->get('titel')" class="mt-2 mb-4"/>
 
                     {{ html()->label('totaal plekken ')}}
                     {{ html()->number()->name('available_spots')->placeholder('aantal plekken')->class('input input-bordered w-full max-w-2xl ')->value($module->available_spots)    }}
-                    <x-input-error :messages="$errors->get('total_places')" class="mt-2 mb-4" />
+                    <x-input-error :messages="$errors->get('total_places')" class="mt-2 mb-4"/>
 
                     {{ html()->textarea()->name('text')->id('textarea')->value($module->text) }}
-                    <x-input-error :messages="$errors->get('text')" class="mt-2 mb-4" />
+                    <x-input-error :messages="$errors->get('text')" class="mt-2 mb-4"/>
 
                     <div>
                         {{  html()->label('categorie')}}
                         {{ html()->select('category_id', $categories->pluck('name', 'id'))->class('select select-bordered w-full max-w-2xl ')->value($module->title)->value($module->category_id) }}
-                        <x-input-error :messages="$errors->get('category_id')" class="mt-2 mb-4" />
+                        <x-input-error :messages="$errors->get('category_id')" class="mt-2 mb-4"/>
                     </div>
-
-                    {{--                        {{ html()->label('totaal fooi contant')}}--}}
-                    {{--                        {{ html()->number('tips_cash', null, null, null, '.01')->placeholder('totaal fooi contant')->class('input input-bordered w-full max-w-2xl mb-4') }}--}}
-
-
-
-
-
-
+                    <div>
+                        {{html()->label('keuze module afbeelding')->class('mt-4')}}
+                        {{ html()->file()->name('file')->class('file-input file-input-bordered w-full max-w-2xl') }}
+                    </div>
 
                     {{ html()->submit('opslaan')->class('btn btn-primary mt-4') }}
                     {{ html()->form()->close() }}
