@@ -46,10 +46,19 @@ Run the next commands in your terminal for installation
     Run npm run dev
 
 
-## Auth
+## Lokaal inlog gegevens
 
 De inlog gegevens voor de user is:
 
 
     Email: test@example.com 
     Password: password
+
+
+## live demo url: https://pvb.frogy.dev/
+De inlog gegevens voor de online website is:
+
+
+    Email: glu@example.nl
+    Password: pvb2024!
+
