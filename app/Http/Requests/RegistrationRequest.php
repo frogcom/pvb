@@ -25,7 +25,7 @@ class RegistrationRequest extends FormRequest
             //
             'student_name' => ['required', 'string', 'max:255'],
             'student_email' => ['required', 'string', 'email', 'max:255', 'unique:registrations,student_email'],
-            'student_phone' => ['required', 'numeric' ],
+            'student_phone' => ['required', 'numeric'],
             'module_id' => ['required', 'integer', 'exists:modules,id'],
 
         ];

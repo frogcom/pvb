@@ -12,7 +12,7 @@ class DashboardController extends Controller
     //
     public function index()
     {
-        $view = view('dashboard');
+        $view = view('backend.dashboard');
         $view->registrations = Registration::with('module')->get();
         return $view;
     }

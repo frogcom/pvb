@@ -14,7 +14,9 @@ class ModuleController extends Controller
         $view->modules = Module::all();
         return $view;
     }
-    public function show(Module $module){
+
+    public function show(Module $module)
+    {
         $view = view('frontend.modules.show');
         $view->module = $module;
         return $view;

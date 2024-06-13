@@ -16,16 +16,17 @@ class RegistrationsController extends Controller
     public function index()
     {
 
-        $view =  view('frontend.registration');
+        $view = view('frontend.registration');
         $view->modules = Module::all();
         return $view;
     }
 
-    public function store(RegistrationRequest $request){
+    public function store(RegistrationRequest $request)
+    {
 
         $module = Module::find($request->get('module_id'));
 
-        if($module->available_spots >= 1){
+        if ($module->available_spots >= 1) {
             $registration = Registration::create([
                 'student_name' => $request->get('student_name'),
                 'student_email' => $request->get('student_email'),

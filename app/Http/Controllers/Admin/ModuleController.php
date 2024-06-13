@@ -17,7 +17,7 @@ class ModuleController extends Controller
     public function index()
     {
         //
-        $view = view('modules.index');
+        $view = view('backend.modules.index');
         $view->modules = Module::all();
         return $view;
     }
@@ -28,7 +28,7 @@ class ModuleController extends Controller
     public function create()
     {
         //
-        $view = view('modules.create');
+        $view = view('backend.modules.create');
         $view->categories = Category::all();
 
 
@@ -80,7 +80,7 @@ class ModuleController extends Controller
     {
         //
 
-        $view = view('modules.edit');
+        $view = view('backend.modules.edit');
 
         $view->module = $module;
         $view->categories = Category::all();
@@ -94,7 +94,7 @@ class ModuleController extends Controller
      */
     public function update(ModuleRequest $request, Module $module)
     {
-        if($module->has('registrations')){
+        if ($module->has('registrations')) {
             $available_spots = $request->get('total_spots') - $module->registrations->count();
 
         } else {
@@ -108,7 +108,7 @@ class ModuleController extends Controller
             'total_spots' => $request->get('total_spots'),
         ]);
 
-        if($request->hasFile('file')){
+        if ($request->hasFile('file')) {
             $file = $request->file('file');
             $filename = time() . '_' . $file->hashName();
             $path = $file->storeAs('modules', $filename, 'public');
@@ -128,7 +128,7 @@ class ModuleController extends Controller
      */
     public function destroy(Module $module)
     {
-        Storage::disk('public')->delete('modules'.$module->image->url);
+        Storage::disk('public')->delete('modules' . $module->image->url);
         $module->image()->delete();
         $module->delete();
         return redirect()->route('modules.index');
